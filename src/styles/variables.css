@@ -6,10 +6,15 @@
   --bg-color: #1f1f1f;
   --bg-second-color: rgba(20, 20, 20, 0.664);
   --main-color: #fdfcfb;
-  --burger-color: rgba(20, 20, 20, 0.664);
-  --burger-itm-hover-color: rgba(20, 20, 20, 0.938);
-  --burger-itm-color: #fdfcfb79;
   --contrast-color: #1f1f1f;
   --font-color: #fdfcfb;
   --scrolbar-color: #fdfcfba1;
+
+  --pos-местоимение: #f87171;
+  --pos-существительное: #34d399;
+  --pos-глагол: #fbbf24;
+  --pos-прилагательное: #60a5fa;
+  --pos-наречие: #f9a8d4;
+  --pos-союз: #a78bfa;
+  --pos-частица: #a8f9f2;
 }

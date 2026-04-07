@@ -6,9 +6,10 @@ import '../styles/scrollbar.css';
 import '../styles/animations.css';
 import style from './app.module.css';
 
-
 import { useTheme } from '../hooks/useTheme';
 import { useScrollbar } from '../hooks/useScrollbar';
+
+import { Dictionary } from '../pages/Dictionary';
 
 export const App = () => {
   useTheme();
@@ -16,6 +17,7 @@ export const App = () => {
 
   return (
     <div className={style.page}>
+      <Dictionary />
     </div>
   );
 };

@@ -1,0 +1,53 @@
+.groups {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.group {
+  margin-bottom: 2rem;
+}
+
+.header {
+  cursor: pointer;
+}
+
+.summary {
+  padding: 1.25rem 1.5rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  background: var(--bg-card);
+  border: 2px solid var(--border-color);
+  border-radius: 16px;
+  list-style: none;
+  transition: all 0.2s ease;
+}
+
+.summary::-webkit-details-marker {
+  display: none;
+}
+
+.summary:hover {
+  background: var(--bg-hover);
+  border-color: var(--accent-color);
+}
+
+.summary span:first-child {
+  display: inline-block;
+  width: 3rem;
+}
+
+.count {
+  color: var(--text-secondary);
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.words {
+  padding: 1rem 0;
+  transition: max-height 0.3s ease;
+}
+
+.group[open] .words {
+  max-height: 2000px;
+}
