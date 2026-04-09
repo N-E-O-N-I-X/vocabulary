@@ -9,7 +9,7 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
-  --bg-color: rgba(233, 233, 233, 0.292);
+  --bg-color: rgba(235, 235, 235, 0.651);
   --bg-second-color: #fdfcfb;
   --main-color: #fdfcfb;
   --main-color: #1f1f1f;
@@ -28,7 +28,7 @@
 
 @media (prefers-color-scheme: light) {
   :root {
-    --bg-color: rgba(233, 233, 233, 0.292);
+    --bg-color: rgba(235, 235, 235, 0.651);
     --bg-second-color: #fdfcfb;
     --main-color: #fdfcfb;
     --main-color: #1f1f1f;

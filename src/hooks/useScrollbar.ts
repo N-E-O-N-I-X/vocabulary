@@ -15,6 +15,8 @@ export function useScrollbar() {
     let isDragging = false
 
     const updateScrollbar = () => {
+      scrollbarThumb.style.transition = 'none'
+      
       const scrollPercentage =
         window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)
       const trackHeight = scrollbarTrack.clientHeight
@@ -28,6 +30,10 @@ export function useScrollbar() {
 
       scrollbarThumb.style.height = `${thumbHeight}px`
       scrollbarThumb.style.top = `${thumbTop}px`
+      
+      requestAnimationFrame(() => {
+        scrollbarThumb.style.transition = 'background 0.2s ease, border-radius 0.2s ease'
+      })
     }
 
     const showScrollbar = () => {
@@ -70,16 +76,17 @@ export function useScrollbar() {
     const handleMouseMove = (e: MouseEvent) => {
       if (!isDragging) return
 
+      scrollbarThumb.style.transition = 'none'
+
       const deltaY = e.clientY - startY
       const trackHeight = scrollbarTrack.clientHeight
-      const thumbHeight = parseFloat(scrollbarThumb.style.height)
+      const thumbHeight = parseFloat(scrollbarThumb.style.height || '40')
       const maxThumbTop = trackHeight - thumbHeight
       const maxScroll = document.documentElement.scrollHeight - window.innerHeight
 
       const scrollDelta = (deltaY / maxThumbTop) * maxScroll
 
       window.scrollTo(0, startScrollTop + scrollDelta)
-
       requestAnimationFrame(updateScrollbar)
     }
 
@@ -93,9 +100,7 @@ export function useScrollbar() {
 
     // События
     const handleScroll = () => {
-      if (!isDragging) {
-        updateScrollbar()
-      }
+      updateScrollbar()
       showScrollbar()
     }
 
@@ -104,15 +109,16 @@ export function useScrollbar() {
       showScrollbar()
     }
 
+    // Подписки
     scrollbarTrack.addEventListener('click', handleTrackClick)
     scrollbarThumb.addEventListener('mousedown', handleThumbMouseDown)
     window.addEventListener('mousemove', handleMouseMove)
     window.addEventListener('mouseup', handleMouseUp)
-
-    updateScrollbar()
-
     window.addEventListener('scroll', handleScroll, { passive: true })
     window.addEventListener('resize', handleResize, { passive: true })
+
+    // Инициализация
+    updateScrollbar()
 
     return () => {
       window.removeEventListener('scroll', handleScroll)
