@@ -10,9 +10,9 @@
     чем стили в медиазапросе предпочтений пользователя
   */
   --bg-color: #1f1f1f;
+  --bg-second-color: rgba(20, 20, 20, 0.257);
   --main-color: #fdfcfb;
   --contrast-color: #1f1f1f;
-  --font-color: #fdfcfb;
   --scrolbar-color: #fdfcfba1;
   --border-color: #fdfcfb81;
   --pos-местоимение: #db5555;
