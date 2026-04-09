@@ -10,12 +10,16 @@
     чем стили в медиазапросе предпочтений пользователя
   */
   --bg-color: #1f1f1f;
-  --bg-second-color: rgba(20, 20, 20, 0.664);
   --main-color: #fdfcfb;
-  --burger-color: rgb(20, 20, 20);
-  --burger-itm-hover-color: rgb(17, 17, 17);
-  --burger-itm-color: #fdfcfb79;
   --contrast-color: #1f1f1f;
   --font-color: #fdfcfb;
   --scrolbar-color: #fdfcfba1;
+  --border-color: #fdfcfb81;
+  --pos-местоимение: #db5555;
+  --pos-существительное: #31a077;
+  --pos-глагол: #daa319;
+  --pos-прилагательное: #4e83c4;
+  --pos-наречие: #ce86ad;
+  --pos-союз: #624ba5;
+  --pos-частица: #624ba5;
 }

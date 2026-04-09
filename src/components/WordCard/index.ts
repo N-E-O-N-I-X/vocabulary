@@ -1,1 +1,1 @@
-export { WordCard } from './WordCard';
+export { WordCard } from './WordCard'

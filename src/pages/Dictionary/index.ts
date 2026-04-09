@@ -1,1 +1,1 @@
-export { Dictionary } from './Dictionary';
+export { Dictionary } from './Dictionary'

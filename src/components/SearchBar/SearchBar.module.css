@@ -1,6 +1,6 @@
 .searchContainer {
   position: relative;
-  margin: 0 auto 2rem;
+  width: 100%;
 }
 
 .searchIcon {
@@ -11,39 +11,83 @@
   width: 1.2rem;
   height: 1.2rem;
   color: var(--text-secondary);
+  pointer-events: none;
 }
 
 .searchInput {
-  padding: 1rem 1rem 1rem 3rem;
-  font-size: 1.1rem;
-  border: 2px solid var(--border-color);
-  border-radius: 12px;
+  width: 100%;
+  padding: 1rem 3rem 1rem 3rem;
+  font-size: 1.05rem;
+  border-radius: 14px;
   background: var(--bg-secondary);
   color: var(--text-primary);
   outline: none;
-  transition: all 0.2s ease;
-}
-
-.searchInput:focus {
-  border-color: var(--accent-color);
-  box-shadow: 0 0 0 3px var(--accent-color-transparent);
+  border: 1px solid transparent;
 }
 
 .searchClear {
   position: absolute;
-  right: 1rem;
+  right: 0.75rem;
   top: 50%;
   transform: translateY(-50%);
-  background: none;
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
   border: none;
   font-size: 1.5rem;
+  line-height: 1;
   color: var(--text-secondary);
   cursor: pointer;
-  padding: 0.25rem;
-  border-radius: 50%;
-  transition: background 0.2s;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
 }
 
-.searchClear:hover {
-  background: var(--bg-hover);
+.dropdown {
+  width: 20%;
+  min-width: 150px;
+  position: absolute;
+  top: calc(100% + 0.8rem);
+  left: 0;
+  right: 0;
+  z-index: 20;
+  overflow: hidden;
+  background: var(--bg-color);
+  opacity: 0.9;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+  backdrop-filter: blur(10px);
+}
+
+.dropdownList {
+  max-height: 320px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  padding: 0.35rem;
+}
+
+.dropdownItem {
+  padding: 0.85rem 0.9rem;
+  cursor: pointer;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.dropdownItem:last-child {
+  border-bottom: none;
+}
+
+.dropdownItem + .dropdownItem {
+  margin-top: 0.35rem;
+}
+
+.dropdownItem:hover {
+  opacity: 0.8;
+}
+
+.dropdownWord {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
 }

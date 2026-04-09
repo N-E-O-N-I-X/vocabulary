@@ -5,16 +5,11 @@
   border-radius: 16px;
   border: 1px solid var(--border-color);
   transition: all 0.3s ease;
-  cursor: pointer;
   position: relative;
   overflow: hidden;
+  color: var(--main-color);
 }
 
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 32px var(--shadow-hover);
-  border-color: var(--accent-color);
-}
 
 .header {
   display: flex;
@@ -24,9 +19,8 @@
 }
 
 .word {
-  font-size: 1.4rem;
+  font-size: clamp(1.25rem, 1.1667rem + 0.381vw, 1.5rem);
   font-weight: 700;
-  color: var(--text-primary);
   margin: 0;
   flex: 1;
   line-height: 1.2;
@@ -34,7 +28,7 @@
 
 .pos {
   padding: 0.4rem 0.8rem;
-  font-size: 0.85rem;
+  font-size: clamp(0.75rem, 0.6667rem + 0.381vw, 1rem);
   font-weight: 600;
   border-radius: 20px;
   color: white !important;
@@ -47,21 +41,19 @@
 }
 
 .description {
-  color: var(--text-secondary);
+  opacity: 0.8;
   line-height: 1.6;
   margin: 0 0 1rem 0;
-  font-size: 1.05rem;
+  font-size: clamp(0.875rem, 0.7917rem + 0.381vw, 1.125rem);
 }
 
 .example {
   margin: 1rem 0 0;
   padding: 1rem;
-  background: var(--bg-secondary);
-  border-left: 4px solid var(--accent-color);
+  border-left: 2px solid var(--border-color);
   font-style: italic;
-  color: var(--text-muted);
   border-radius: 0 8px 8px 0;
-  font-size: 0.95rem;
+  font-size: clamp(1rem, 0.9583rem + 0.1905vw, 1.125rem);
 }
 
 .imageContainer {

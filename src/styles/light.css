@@ -12,13 +12,19 @@
   --bg-color: #fdfcfb;
   --bg-second-color: rgba(233, 233, 233, 0.753);
   --main-color: #fdfcfb;
-  --burger-color: rgba(233, 233, 233, 0.925);
-  --burger-itm-hover-color: rgba(216, 216, 216, 0.925);
-  --burger-itm-color: #1f1f1f7a;
   --main-color: #1f1f1f;
   --contrast-color: #fdfcfb;
   --font-color: #1f1f1f;
   --scrolbar-color: #1f1f1fbd;
+  --border-color: #00000081;
+
+  --pos-местоимение: #f87171fa;
+  --pos-существительное: #34d399c4;
+  --pos-глагол: #fbbe24bb;
+  --pos-прилагательное: #60a5fa;
+  --pos-наречие: #f9a8d4d8;
+  --pos-союз: #a78bfacb;
+  --pos-частица: #a78bfacb;
 }
 
 @media (prefers-color-scheme: light) {
@@ -26,12 +32,18 @@
     --bg-color: #fdfcfb;
     --bg-second-color: rgba(233, 233, 233, 0.753);
     --main-color: #fdfcfb;
-    --burger-color: rgba(233, 233, 233, 0.925);
-    --burger-itm-hover-color: rgba(216, 216, 216, 0.925);
-    --burger-itm-color: #1f1f1f7a;
     --main-color: #1f1f1f;
     --contrast-color: #fdfcfb;
     --font-color: #1f1f1f;
     --scrolbar-color: #1f1f1fbd;
+    --border-color: #00000081;
+
+    --pos-местоимение: #f87171fa;
+    --pos-существительное: #34d399c4;
+    --pos-глагол: #fbbe24bb;
+    --pos-прилагательное: #60a5fa;
+    --pos-наречие: #f9a8d4d8;
+    --pos-союз: #a78bfacb;
+    --pos-частица: #a78bfacb;
   }
 }

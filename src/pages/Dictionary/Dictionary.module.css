@@ -1,6 +1,6 @@
 .dictionary {
   min-height: 100vh;
-  padding: 2rem 1rem;
+  padding: 2rem 4rem;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -9,7 +9,6 @@
   position: sticky;
   top: 1rem;
   z-index: 100;
-  background: var(--bg-primary);
   backdrop-filter: blur(20px);
   border-radius: 16px;
   box-shadow: 0 8px 32px rgba(0,0,0,0.1);

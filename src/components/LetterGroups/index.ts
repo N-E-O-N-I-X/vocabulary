@@ -1,1 +1,1 @@
-export { LetterGroups } from './LetterGroups';
+export { LetterGroups } from './LetterGroups'

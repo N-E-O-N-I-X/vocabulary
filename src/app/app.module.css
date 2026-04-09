@@ -1,8 +1,8 @@
 .page {
-  background-color: var(--bg-color);
   color: var(--font-color);
   font-family: 'Hasklig', monospace;
   min-height: 100vh;
+  background-color: var(--bg-color);
 }
 
 button {
