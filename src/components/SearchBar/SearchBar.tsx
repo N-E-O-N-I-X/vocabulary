@@ -31,23 +31,19 @@ export const SearchBar = () => {
       <svg
         className={style.searchIcon}
         xmlns="http://www.w3.org/2000/svg"
-        width="32"
-        height="32"
-        viewBox="0 0 32 32"
+        width="16"
+        height="16"
+        viewBox="0 0 16 16"
       >
-        <path fill="currentColor" d="M11.63 8h7.38v2h-7.38z" />
-        <path fill="currentColor" d="M7 8h3.19v2H7z" />
-        <path fill="currentColor" d="M7 16h7.38v2H7z" />
-        <path fill="currentColor" d="M15.81 16H19v2h-3.19zM7 12h9v2H7z" />
         <path
           fill="currentColor"
-          d="M13 0C5.82 0 0 5.82 0 13s5.82 13 13 13s13-5.82 13-13A13 13 0 0 0 13 0m0 24C6.925 24 2 19.075 2 13S6.925 2 13 2s11 4.925 11 11s-4.925 11-11 11m9.581-.007l1.414-1.414l7.708 7.708l-1.414 1.414z"
+          d="m11.271 11.978l3.872 3.873a.502.502 0 0 0 .708 0a.502.502 0 0 0 0-.708l-3.565-3.564c2.38-2.747 2.267-6.923-.342-9.532c-2.73-2.73-7.17-2.73-9.898 0c-2.728 2.729-2.728 7.17 0 9.9a6.955 6.955 0 0 0 4.949 2.05a.5.5 0 0 0 0-1a5.96 5.96 0 0 1-4.242-1.757a6.01 6.01 0 0 1 0-8.486a6.004 6.004 0 0 1 8.484 0a6.01 6.01 0 0 1 0 8.486a.5.5 0 0 0 .034.738"
         />
       </svg>
       <input
         type="text"
         className={style.searchInput}
-        placeholder="Поиск по словарю..."
+        placeholder="Поиск"
         value={localSearch}
         onChange={handleChange}
         autoComplete="off"
