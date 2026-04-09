@@ -19,7 +19,7 @@ body::-webkit-scrollbar {
   z-index: 9999;
   opacity: 0;
   transform: translateX(4px);
-  transition: opacity .4s ease, transform .4s ease;
+  transition: opacity .7s ease, transform .7s ease;
 }
 
 .scrollbar-overlay.is-visible {
@@ -34,6 +34,7 @@ body::-webkit-scrollbar {
   border-radius: 5px;
   background: var(--scrolbar-color); 
   cursor: pointer;
+  transition: none !important;
 }
 
 @media (width < 600px) {
