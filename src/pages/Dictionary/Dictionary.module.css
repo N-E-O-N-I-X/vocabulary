@@ -5,6 +5,13 @@
   margin: 0 auto;
 }
 
+.heading {
+  color: var(--main-color);
+  font-size: clamp(1.125rem, 0.875rem + 1.1429vw, 1.875rem);
+  text-align: center;
+  margin: 10px auto 30px;
+}
+
 .searchWrapper {
   position: sticky;
   top: 1rem;
