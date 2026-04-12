@@ -3,10 +3,21 @@
   margin-bottom: 1.5rem;
   background: var(--bg-second-color);
   border-radius: 16px;
-  transition: all 0.3s ease;
+  transition: all 0.1s ease;
   position: relative;
   overflow: hidden;
   color: var(--main-color);
+  cursor: pointer;
+}
+
+@media (width < 550px) {
+  .card {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.card:focus-visible {
+  outline: 2px solid var(--border-color);
 }
 
 .header {
@@ -58,12 +69,36 @@
 }
 
 .example {
-  margin: 1rem 0 0;
-  padding: 1rem;
+  max-height: 0;
+  opacity: 0;
+  margin-top: 0 !important;
+  padding: 0 1.5rem !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   border-left: 2px solid var(--border-color);
   font-style: italic;
   border-radius: 0 8px 8px 0;
   font-size: clamp(1rem, 0.9583rem + 0.1905vw, 1.125rem);
   line-height: 1.6;
   background: var(--bg-color);
+}
+
+.example.show {
+  max-height: 100%;
+  opacity: 1;
+  margin: 1rem 0 0 !important;
+  padding: 1rem 1.5rem !important;
+}
+
+@media (min-width: 601px) {
+  .card {
+    cursor: default;
+  }
+  
+  .example {
+    max-height: none !important;
+    opacity: 1 !important;
+    margin: 1rem 0 0 !important;
+    padding: 1rem 1.5rem !important;
+    overflow: visible !important;
+  }
 }
