@@ -7,7 +7,7 @@ interface Props {
 }
 
 export const WordCard = ({ word }: Props) => {
-  const [showImage, setShowImage] = useState(false)
+  const [showExample, setShowExample] = useState(false) // ← НОВОЕ
 
   const posColors: Record<string, string> = {
     местоимение: 'var(--pos-местоимение)',
@@ -24,33 +24,41 @@ export const WordCard = ({ word }: Props) => {
 
   const posColor = posColors[word['part of speech']] || 'var(--pos-default)'
 
+  const toggleExample = () => {
+    setShowExample(prev => !prev)
+  }
+
   return (
     <article
-      className={style.card}
+      className={`${style.card} ${showExample ? style.expanded : ''}`}
       data-word={word.word}
-      onMouseEnter={() => setShowImage(true)}
-      onMouseLeave={() => setShowImage(false)}
+      onClick={toggleExample}
+      role="button"
+      tabIndex={0}
+      aria-expanded={showExample}
+      onKeyDown={e => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault()
+          toggleExample()
+        }
+      }}
     >
       <header className={style.header}>
         <h3 className={style.word}>{word.word}</h3>
-        <span className={style.pos} style={{ '--pos-color': posColor } as React.CSSProperties}>
+        <span 
+          className={style.pos} 
+          style={{ '--pos-color': posColor } as React.CSSProperties}
+        >
           {word['part of speech']}
         </span>
       </header>
 
       <p className={style.description}>{word.description}</p>
 
-      {word.example && <blockquote className={style.example}>"{word.example}"</blockquote>}
-
-      {word.image && showImage && (
-        <div className={style.imageContainer}>
-          <img
-            src={`/assets/media/${word.image}`}
-            alt={word.word}
-            className={style.image}
-            loading="lazy"
-          />
-        </div>
+      {word.example && (
+        <blockquote className={`${style.example} ${showExample ? style.show : ''}`}>
+          "{word.example}"
+        </blockquote>
       )}
     </article>
   )

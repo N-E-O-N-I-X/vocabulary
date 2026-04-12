@@ -5,8 +5,17 @@
 
 .group {
   margin-bottom: 2rem;
-  border-radius: 16px;
   overflow: hidden;
+}
+
+@media (width < 550px) {
+  .group {
+    margin-bottom: 0.8rem;
+  }
+}
+
+.group:last-child {
+  margin-bottom: 0;
 }
 
 .header {
@@ -24,7 +33,6 @@
 
 .header:active {
   transform: scale(0.945);
-
 }
 
 .summary {

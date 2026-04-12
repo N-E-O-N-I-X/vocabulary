@@ -5,7 +5,6 @@ interface Word {
   'part of speech': string
   description: string
   example?: string
-  image?: string
 }
 
 type PosType = Word['part of speech']
